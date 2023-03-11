@@ -11,7 +11,11 @@ I created this as the original patchbay editor provided by m-audio only runs on 
  
 I am using a Midisport 8x8 with my Presonus Quantum 2626 which has only 1 midi input and output ; the patch i use is contained in `patch1.syx`, where i essentially merge inputs 2 to 8 on them midisport to output 1 which is then sent to the input of my presonus and take the output of the presonus and pass it into input 1 of the midisport which then routes to outputs 2 to 8.
 
-I can now use my Midisport 8x8 as a bus to route different instruments inputs and outputs into the Presonus Midi ports rather than connecting the midipsort via USB; I am running my Presonus at 96 khz/128 frames with 0.7 sec latency. Using the midi ports on my midisport routed to the presonus midi ports appears to give me almost instantaneous response (running an Xstation 25 with local control off, where when i press a key, it first sends a midi message to my DAW which then routes the midi message back to play the note on the X station - I hear no difference between playing it directly with local control on)
+I can now use my Midisport 8x8 as a bus to route different instruments inputs and outputs into the Presonus Midi ports rather than connecting the midipsort via USB (and consequently saving a USB port, with potentially lower latency than using Midi on USB).
+
+I am running my Presonus at 96 khz/128 frames with 0.7 sec latency. Using the midi ports on my midisport routed to the presonus midi ports appears to give me almost instantaneous response (running an Xstation 25 with local control off, where when i press a key, it first sends a midi message to my DAW which then routes the midi message back to play the note on the X station - I hear no difference between playing it directly with local control on)
+
+Please note that depending on which audio interface you are using and the latency on  the audio interface, your experience may be different - audio latency will be the bigger factor here than midi latency and hence in some use cases, you may actually get a better experience by running your midi interface as a seperate USB to the audio interface. The setup shown above is based on what works for me.
 
 The steps to generate, load and check patch values are as follows.
 
