@@ -1,10 +1,10 @@
 # midisport-patchbay-editor
 Sysex generator to update Midisport 8x8 patches - Use at your own risk.
 
-The Libreoffice calc ODS file lets you generate sysex files to update patch 1-8 of the midisport 8x8.
+The Libreoffice calc ODS file lets you generate sysex files to update patch 1-8 of the midisport 8x8. You will still need to use an application to send the sysex to the Midisport and ideally monitor the results to confirm that it is correctly loaded. See further below
 
-I created this as the original patchbay editor provided by m-audio only runs on Windows XP/2000, I am using a Mac M1 and needed a way to setup my Midisport 8x8 as a midi patchbay in stand alone mode.
-
+I created this as the original patchbay editor provided by m-audio only runs on Windows XP/2000, I am using a Mac M1 and needed a way to setup my Midisport 8x8 as a midi patchbay in stand alone mode on my mac. Libreoffice calc is free and available across Windows/Linux/Mac so figured this was a good option to build a patchbay editor using spreadsheet and macros.
+ 
 I am using a Midisport 8x8 with my Presonus Quantum 2626 which has only 1 midi input and output ; the patch i use is contained in `patch1.syx`, where i essentially merge inputs 2 to 8 on them midisport to output 1 which is then sent to the input of my presonus and take the output of the presonus and pass it into input 1 of the midisport which then routes to outputs 2 to 8.
 
  I can now use my Midisport 8x8 as a bus to route different instruments inputs and outputs into the Presonus Midi ports rather than connecting the midipsort via USB; I am running my Presonus at 96 khz/128 frames with 0.7 sec latency. Using the midi ports on my midisport routed to the presonus midi ports appears to give me almost instantaneous response (running an Xstation 25 with local control off, where when i press a key, it first sends a midi message to my DAW which then routes the midi message back to play the note on the X station - I hear no difference between playing it directly with local control on)
